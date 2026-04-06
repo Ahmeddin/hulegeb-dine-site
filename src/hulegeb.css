@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-green: #1B3022;
+  --color-primary-gold: #D4AF37;
+  --color-cream: #FDFCF0;
+  --color-dark-brown: #3C2A21;
+  --color-gold-hover: #C5A028;
+  
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+
+  --animate-fade-in: fade-in 0.5s ease-out;
+  --animate-slide-up: slide-up 0.5s ease-out;
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes slide-up {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+}
+
+@layer base {
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #FDFCF0; /* --color-cream */
+    color: #3C2A21; /* --color-dark-brown */
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    font-weight: 700;
+  }
+}
+
+/* Custom Utilities for Hulegeb */
+.bg-primary-green { background-color: #1B3022; }
+.bg-primary-gold { background-color: #D4AF37; }
+.bg-cream { background-color: #FDFCF0; }
+.bg-dark-brown { background-color: #3C2A21; }
+.text-primary-green { color: #1B3022; }
+.text-primary-gold { color: #D4AF37; }
+.text-cream { color: #FDFCF0; }
+.text-dark-brown { color: #3C2A21; }
+.border-primary-gold { border-color: #D4AF37; }
+.border-primary-green { border-color: #1B3022; }
